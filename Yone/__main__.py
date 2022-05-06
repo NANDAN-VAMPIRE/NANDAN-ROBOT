@@ -189,10 +189,10 @@ def start(update: Update, context: CallbackContext):
             text = (
                 f"Hello {mention_html(user.id, user.first_name)}, I'm {bot.first_name}\n\n"
                 f"┏━━━━━━━━━━━━━━━━━━━\n"
-                f"┣[• Owner : @{OWNER_USERNAME}  \n"
+                f"┣[• Owner : @The_Criminals_God  \n"
                 f"┣[• Uptime : {uptime} \n"
                 f"┣[• Core : {psutil.cpu_percent()}%\n"
-                f"┣[• Python   : Ver {python_version()} \n"
+                f"┣[• Python   : @Karunada_Kings_And_Queens \n"
                 f"┗━━━━━━━━━━━━━━━━━━━")
         
 
@@ -200,10 +200,10 @@ def start(update: Update, context: CallbackContext):
                 [
                     InlineKeyboardButton(
                         text="SUPPORT", 
-                        url=f"https://t.me/{SUPPORT_CHAT}"),
+                        url=f"https://t.me/Karunada_Kings_And_Queens"),
                     InlineKeyboardButton(
                         text="DEVLOPER", 
-                        url=f"https://t.me/{OWNER_USERNAME}")
+                        url=f"https://t.methe_criminals_god")
                     
                 ],
                 
@@ -240,16 +240,16 @@ def yone_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                    [
-                     InlineKeyboardButton(text="Support", url="t.me/Yone_Support"),
-                     InlineKeyboardButton(text="News", url="t.me/Yone_Updates"),
+                     InlineKeyboardButton(text="Support", url="t.me/Karunada_Kings_And_Queens"),
+                     InlineKeyboardButton(text="News", url="t.me/karunada_Sarkar"),
                    ],
                    [
-                    InlineKeyboardButton(text="Back", callback_data="yone_back")
+                    InlineKeyboardButton(text="Back", callback_data="Agora_back")
                    ]
                 ]
             ),
         )
-    elif query.data == "yone_back":
+    elif query.data == "Agora_back":
         query.message.edit_text(
                 PM_START_TEXT.format(
                         escape_markdown(first_name), escape_markdown(context.bot.first_name)),
