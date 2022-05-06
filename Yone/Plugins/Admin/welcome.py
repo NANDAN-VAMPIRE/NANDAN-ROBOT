@@ -194,7 +194,7 @@ def new_member(update: Update, context: CallbackContext):
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
                     f"#USER_JOINED\n"
-                    f"Bot Owner just joined the group"
+                    f"Hakka avnoun Bot Owner Banda Nod Group G hudgyyar aatri yogond barri lagu"
                 )
                 continue
 
