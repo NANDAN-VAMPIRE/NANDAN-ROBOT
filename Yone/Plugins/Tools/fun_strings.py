@@ -204,8 +204,8 @@ PAT_STICKERS = (
 )
 
 PING_STRING = (
-    "PONG!!",
-    "I am here!",
+    "HEL KAKA ADEN ELLE!!",
+    "HODI SHAVAGI DAG MAJJAGI!",
 )
 
 ITEMS = (
