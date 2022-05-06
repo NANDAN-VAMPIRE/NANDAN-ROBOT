@@ -57,24 +57,24 @@ def check_flood(update, context) -> str:
         getmode, getvalue = sql.get_flood_setting(chat.id)
         if getmode == 1:
             chat.ban_member(user.id)
-            execstrings = "Banned"
-            tag = "BANNED"
+            execstrings = "Nishedisalaytu"
+            tag = "NISHEDISALAYTU"
         elif getmode == 2:
             chat.ban_member(user.id)
             chat.unban_member(user.id)
-            execstrings = "Kicked"
-            tag = "KICKED"
+            execstrings = "VADIYALAYTU"
+            tag = "VADIYALAYTU"
         elif getmode == 3:
             context.bot.restrict_chat_member(
                 chat.id, user.id, permissions=ChatPermissions(can_send_messages=False),
             )
-            execstrings = "Muted"
-            tag = "MUTED"
+            execstrings = "SHHH SUMMIRU"
+            tag = "SHHH SUMMIRU"
         elif getmode == 4:
             bantime = extract_time(msg, getvalue)
             chat.ban_member(user.id, until_date=bantime)
-            execstrings = f"Banned for {getvalue}"
-            tag = "TBAN"
+            execstrings = f"HATRA NINN for {getvalue}"
+            tag = "HATRA NINN"
         elif getmode == 5:
             mutetime = extract_time(msg, getvalue)
             context.bot.restrict_chat_member(
@@ -85,7 +85,7 @@ def check_flood(update, context) -> str:
             )
             execstrings = f"Muted for {getvalue}"
             tag = "TMUTE"
-        send_message(msg, f"Beep Boop! Boop Beep!\n{execstrings}!")
+        send_message(msg, f"MAATAD EGA NODUVA BSDK!\n{execstrings}!")
 
         return (
             "<b>{}:</b>"
