@@ -23,7 +23,7 @@ def approve(update, context):
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "I don't know who you're talking about, you're going to need to specify a user!",
+            "Yar bagge matadati pa dost , avr name mention madi hel nang!",
         )
         return ""
     try:
@@ -32,18 +32,18 @@ def approve(update, context):
         return ""
     if member.status == "administrator" or member.status == "creator":
         message.reply_text(
-            "User is already admin - locks, blocklists, and antiflood already don't apply to them.",
+            "already admin adano eva- locks, blocklists, and antiflood already adan eva mattomme madbeda.",
         )
         return ""
     if sql.is_approved(message.chat_id, user_id):
         message.reply_text(
-            f"[{member.user['first_name']}](tg://user?id={member.user['id']}) is already approved in {chat_title}",
+            f"[{member.user['first_name']}](tg://user?id={member.user['id']}) is hodi shavgi dag majgi in {chat_title}",
             parse_mode=ParseMode.MARKDOWN,
         )
         return ""
     sql.approve(message.chat_id, user_id)
     message.reply_text(
-        f"[{member.user['first_name']}](tg://user?id={member.user['id']}) has been approved in {chat_title}! They will now be ignored by automated admin actions like locks, blocklists, and antiflood.",
+        f"[{member.user['first_name']}](tg://user?id={member.user['id']}) howdhoo huliya admin aadi ni hodi halagi {chat_title}! They will now be ignored by automated admin actions like locks, blocklists, and antiflood.",
         parse_mode=ParseMode.MARKDOWN,
     )
     log_message = (
